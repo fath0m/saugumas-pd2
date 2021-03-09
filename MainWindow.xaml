@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AesWpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+        Title="VIKO EIF AES" Height="339" Width="404">
+    <Grid HorizontalAlignment="Center" Width="404">
+        <TextBox x:Name="TextInput" HorizontalAlignment="Center" Margin="0,24,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" Height="46"/>
+        <TextBox x:Name="KeyInput" HorizontalAlignment="Center" Margin="0,102,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="233"/>
+        <Button x:Name="EncryptButton" Content="Encrypt" HorizontalAlignment="Left" Margin="86,138,0,0" VerticalAlignment="Top" Width="59"/>
+        <Button x:Name="DecryptButton" Content="Decrypt" HorizontalAlignment="Left" Margin="259,138,0,0" VerticalAlignment="Top" Width="59"/>
+        <TextBlock HorizontalAlignment="Left" Margin="86,81,0,0" Text="Key:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="86,3,0,0" Text="Input:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="OutputInput" HorizontalAlignment="Center" Margin="0,203,0,0" IsReadOnly="True" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" Height="78"/>
+        <TextBlock HorizontalAlignment="Left" Margin="86,182,0,0" Text="Output:" TextWrapping="Wrap" VerticalAlignment="Top"/>
     </Grid>
 </Window>
