@@ -18,7 +18,7 @@
         <RadioButton x:Name="CBCRadioButton" Content="CBC" HorizontalAlignment="Left" Margin="142,10,0,0" VerticalAlignment="Top" GroupName="Mode" IsChecked="True"/>
         <RadioButton x:Name="ECBRadioButton" Content="ECB" HorizontalAlignment="Left" Margin="195,10,0,0" VerticalAlignment="Top" GroupName="Mode"/>
         <TextBlock HorizontalAlignment="Left" Margin="86,9,0,0" Text="Mode:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Button x:Name="SaveOutputButton" Content="Save as..." HorizontalAlignment="Center" Margin="0,336,0,0" VerticalAlignment="Top" Width="232"/>
-        <Button x:Name="LoadInputButton" Content="Load from file..." HorizontalAlignment="Center" Margin="0,103,0,0" VerticalAlignment="Top" Width="232"/>
+        <Button x:Name="SaveOutputButton" Content="Save as..." HorizontalAlignment="Center" Margin="0,336,0,0" VerticalAlignment="Top" Width="232" Click="SaveOutputButton_Click"/>
+        <Button x:Name="LoadInputButton" Content="Load from file..." HorizontalAlignment="Center" Margin="0,103,0,0" VerticalAlignment="Top" Width="232" Click="LoadInputButton_Click"/>
     </Grid>
 </Window>
