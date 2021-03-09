@@ -29,7 +29,7 @@ namespace AesWpf
             {
                 BlockSize = 128,
                 KeySize = 256,
-                Mode = CipherMode.CBC,
+                Mode = mode == "CBC" ? CipherMode.CBC : CipherMode.ECB,
                 Padding = PaddingMode.PKCS7,
                 IV = IV,
                 Key = keyBytes,
