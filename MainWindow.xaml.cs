@@ -24,5 +24,75 @@ namespace AesWpf
         {
             InitializeComponent();
         }
+
+        private bool IsFormFilledIn()
+        {
+            return !String.IsNullOrEmpty(TextInput.Text) && !String.IsNullOrEmpty(KeyInput.Text);
+        }
+
+        private void EncryptButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!IsFormFilledIn())
+            {
+                MessageBox.Show("Please fill out the input text and key", "Error occured");
+                return;
+            }
+
+            AES aes;
+
+            try
+            {
+                aes = new AES(KeyInput.Text);
+            } catch (Exception error)
+            {
+                MessageBox.Show(error.Message, "Error occured");
+                return;
+            }
+
+            var encrypted = "";
+
+            try
+            {
+                encrypted = aes.Encrypt(TextInput.Text);
+            } catch
+            {
+                MessageBox.Show("Unable to encrypt the message", "Error occured");
+            }
+                     
+            OutputInput.Text = encrypted;
+        }
+
+        private void DecryptButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!IsFormFilledIn())
+            {
+                MessageBox.Show("Please fill out the input text and key", "Error occured");
+                return;
+            }
+
+            AES aes;
+
+            try
+            {
+                aes = new AES(KeyInput.Text);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message, "Error occured");
+                return;
+            }
+
+            var decrypted = "";
+
+            try
+            {
+                decrypted = aes.Decrypt(TextInput.Text);
+            } catch
+            {
+                MessageBox.Show("Unable to decrypt the message", "Error occured");
+            }
+ 
+            OutputInput.Text = decrypted;
+        }
     }
 }
